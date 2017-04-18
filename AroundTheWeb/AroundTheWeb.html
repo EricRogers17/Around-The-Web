@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Around The Web</title>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/AroundTheWeb.css">
+
+	
+
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous"></script>
+
+  	<!-- Font Awesome -->
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+<body>
+	 <div class="header">
+		<h1>Welcome to Around The Web</h1>
+		<p>Around The Web is a simple board game that allows you to advance based on the number you roll.</p>
+		<p><span>Rules</span>: Advance by rolling a six sided die. When you land on certain spaces you must answer a simple riddle. Get it wrong, and you must go back to start. Land on a # symbol, move forward an additional two spaces. Land on a @ symbol, move back three spaces. If you land on a green space, the internet troll will eat you and you lose a turn. First person to the end wins!</p>
+	</div>
+	<p>Ready to Play? <button id="readyButton"> Yes!</button></p>
+	<p>Number of Players: <span id="players"></span></p>
+	<p>To begin press start -->  <button id="start">Start!</button></p>
+
+	<div class="diceWidget">
+		<h3>Virtual Die</h3>
+		<h4>Player <span>1</span>'s Turn</h4>
+		<p><button id="diceRoll">Roll The dice!</button></p>
+		<div class="container">
+			<p id="diceValue">Value</p>
+		</div>
+	</div>
+
+<!-- <div class="placeholder"><p>L</p></div> -->
+<!-- Game Board Area -->
+	<div class="board">
+		
+		<div class="startSpot">
+			<p>Start</p>	
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotHashtag">
+			<p>#</p>
+		</div>
+		<div class="spotAt">
+			<p>@</p>
+		</div>
+		<div class="spotTroll">
+			<p><i class="fa fa-optin-monster" aria-hidden="true"></i>
+			</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotAt">
+			<p>@</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotHashtag">
+			<p>#</p>
+		</div>
+		<div class="spotAt">
+			<p>@</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotTroll">
+			<p><i class="fa fa-optin-monster" aria-hidden="true"></i></p>
+		</div>
+		<div class="spotHashtag">
+			<p>#</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotAt">
+			<p>@</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotTroll">
+			<p><i class="fa fa-optin-monster" aria-hidden="true"></i></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotHashtag">
+			<p>#</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotTroll">
+			<p><i class="fa fa-optin-monster" aria-hidden="true"></i></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div><div class="spotHashtag">
+			<p>#</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div><div class="spotHashtag">
+			<p>#</p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotBlank">
+			<p></p>
+		</div>
+		<div class="spotAt">
+			<p>@</p>
+		</div>
+		<div class="finish">
+			<p><i class="fa fa-flag-checkered" aria-hidden="true"></i>
+			</p>
+		</div>
+	</div>
+	<!-- PLAYER 1 PLACEHOLDER -->
+	<div class="playerPosition1">
+		<div class="spacer">
+			<div class="player1">1</div>
+		</div>
+		<div>
+			<div class="player1">2</div>
+		</div>
+		<div>
+			<div class="player1">3</div>
+		</div>
+		<div>
+			<div class="player1">4</div>
+		</div>
+		<div>
+			<div class="player1">5</div>
+		</div>
+		<div>
+			<div class="player1">6</div>
+		</div>
+		<div>
+			<div class="player1">7</div>
+		</div>
+		<div>
+			<div class="player1">8</div>
+		</div>
+		<div>
+			<div class="player1">9</div>
+		</div>
+		<div>
+			<div class="player1">10</div>
+		</div>
+		<div>
+			<div class="player1">11</div>
+		</div>
+		<div>
+			<div class="player1">12</div>
+		</div>
+		<div>
+			<div class="player1">13</div>
+		</div>
+		<div>
+			<div class="player1">14</div>
+		</div>
+		<div>
+			<div class="player1">15</div>
+		</div>
+		<div>
+			<div class="player1">16</div>
+		</div>
+		<div>
+			<div class="player1">17</div>
+		</div>
+		<div>
+			<div class="player1">18</div>
+		</div>
+		<div>
+			<div class="player1">19</div>
+		</div>
+		<div>
+			<div class="player1">20</div>
+		</div>
+		<div>
+			<div class="player1">21</div>
+		</div>
+		<div>
+			<div class="player1">22</div>
+		</div>
+		<div>
+			<div class="player1">23</div>
+		</div>
+		<div>
+			<div class="player1">24</div>
+		</div>
+		<div>
+			<div class="player1">25</div>
+		</div>
+		<div>
+			<div class="player1">26</div>
+		</div>
+		<div>
+			<div class="player1">27</div>
+		</div>
+		<div>
+			<div class="player1">28</div>
+		</div>
+		<div>
+			<div class="player1">29</div>
+		</div>
+		<div>
+			<div class="player1">30</div>
+		</div>
+		<div>
+			<div class="player1">31</div>
+		</div>
+		<div>
+			<div class="player1">32</div>
+		</div>
+		<div>
+			<div class="player1">33</div>
+		</div>
+		<div>
+			<div class="player1">34</div>
+		</div>
+		<div>
+			<div class="player1">35</div>
+		</div>
+		<div>
+			<div class="player1">36</div>
+		</div>
+		<div>
+			<div class="player1">37</div>
+		</div>
+		<div>
+			<div class="player1">38</div>
+		</div>
+	</div>
+	<!-- PLAYER 2 PLACEHOLDER -->
+	<div class="playerPosition2">
+		<div class="spacer">
+			<div class="player2">1</div>
+		</div>
+		<div>
+			<div class="player2">2</div>
+		</div>
+		<div>
+			<div class="player2">3</div>
+		</div>
+		<div>
+			<div class="player2">4</div>
+		</div>
+		<div>
+			<div class="player2">5</div>
+		</div>
+		<div>
+			<div class="player2">6</div>
+		</div>
+		<div>
+			<div class="player2">7</div>
+		</div>
+		<div>
+			<div class="player2">8</div>
+		</div>
+		<div>
+			<div class="player2">9</div>
+		</div>
+		<div>
+			<div class="player2">10</div>
+		</div>
+		<div>
+			<div class="player2">11</div>
+		</div>
+		<div>
+			<div class="player2">12</div>
+		</div>
+		<div>
+			<div class="player2">13</div>
+		</div>
+		<div>
+			<div class="player2">14</div>
+		</div>
+		<div>
+			<div class="player2">15</div>
+		</div>
+		<div>
+			<div class="player2">16</div>
+		</div>
+		<div>
+			<div class="player2">17</div>
+		</div>
+		<div>
+			<div class="player2">18</div>
+		</div>
+		<div>
+			<div class="player2">19</div>
+		</div>
+		<div>
+			<div class="player2">20</div>
+		</div>
+		<div>
+			<div class="player2">21</div>
+		</div>
+		<div>
+			<div class="player2">22</div>
+		</div>
+		<div>
+			<div class="player2">23</div>
+		</div>
+		<div>
+			<div class="player2">24</div>
+		</div>
+		<div>
+			<div class="player2">25</div>
+		</div>
+		<div>
+			<div class="player2">26</div>
+		</div>
+		<div>
+			<div class="player2">27</div>
+		</div>
+		<div>
+			<div class="player2">28</div>
+		</div>
+		<div>
+			<div class="player2">29</div>
+		</div>
+		<div>
+			<div class="player2">30</div>
+		</div>
+		<div>
+			<div class="player2">31</div>
+		</div>
+		<div>
+			<div class="player2">32</div>
+		</div>
+		<div>
+			<div class="player2">33</div>
+		</div>
+		<div>
+			<div class="player2">34</div>
+		</div>
+		<div>
+			<div class="player2">35</div>
+		</div>
+		<div>
+			<div class="player2">36</div>
+		</div>
+		<div>
+			<div class="player2">37</div>
+		</div>
+		<div>
+			<div class="player2">38</div>
+		</div>
+	</div>
+	
+<!-- JS file -->
+	<script type="text/javascript" src="assets/js/AroundTheWeb.js"></script>
+</body>
+</html>

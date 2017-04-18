@@ -1,0 +1,160 @@
+body {
+	background-color: #79a2e5;
+	margin-left: 2em;
+}
+.header {
+	max-width: 600px;
+
+}
+.board {
+	display: inline-block;
+	padding-left: 50px;
+/*	max-width: 50px;
+*/}
+.playerPosition1 {
+	margin-left: 5px;
+	margin-bottom: 3px;
+	display: inline-block;
+	position: absolute;
+	top: 338px;
+}
+.player1 {
+	display: inline-block;
+	margin-top: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-left: none;
+	border-top: 1px solid #325ce5;
+	border-bottom: 1px solid #325ce5;
+	height: 30.5px;
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 20px;
+}
+
+.playerPosition2 {
+	margin-left: 35px;
+	margin-bottom: 3px;
+	display: inline-block;
+	position: absolute;
+	top: 338px;
+}
+.player2 {
+	display: inline-block;
+	margin-top: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-left: none;
+	border-top: 1px solid #325ce5;
+	border-bottom: 1px solid #325ce5;
+	height: 30.5px;
+	padding-top: 10px;
+	width: 20px;
+}
+.spacer {
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+/*.placeholder {
+	margin-left: 200px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid red;
+}*/
+.startSpot {
+	margin: 1px;
+	width: 40px;
+	height: 40px;
+	background-color: pink;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.startSpot p {
+	margin: 0px;
+	padding-left: 4px;
+	padding-top: 12px;
+}
+.spotBlank {
+	margin: 1px;
+	width: 40px;
+	height: 40px;
+	background-color: orange;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.spotHashtag {
+	margin: 1px;
+	width: 40px;
+	height: 40px;
+	background-color: yellow;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.spotHashtag p {
+	margin: 0px;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+.spotAt {
+	margin: 1px;
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.spotAt p {
+	margin: 0px;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+.spotTroll {
+	margin: 1px;
+	width: 40px;
+	height: 40px;
+	background-color: green;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.spotTroll p {
+	margin: 0px;
+	padding-left: 12px;
+	padding-top: 12px;
+}
+.finish {
+	margin: 1px;
+	width: 40px;
+	height: 40px;
+	background-color: lightblue;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.finish p {
+	margin: 0px;
+	padding-left: 12px;
+	padding-top: 12px;
+}
+.diceWidget {
+	background-color: white;
+	margin-left: 325px;
+	margin-right: 50px;
+	margin-bottom: 0px;
+	width: 150px;
+	height: 175px;
+	border: 2px solid black;
+	position: fixed;
+	top: 204px;
+}
+.diceWidget h3, h4 {
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.diceWidget button {
+	margin-left: 20%;
+	padding: 8px;
+	background-color: lightgreen;
+}
+.container {
+	text-align: center;
+}
